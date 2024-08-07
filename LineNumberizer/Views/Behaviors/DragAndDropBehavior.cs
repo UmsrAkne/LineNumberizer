@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using LineNumberizer.Models;
 using LineNumberizer.ViewModels;
 using Microsoft.Xaml.Behaviors;
 
@@ -49,7 +51,7 @@ namespace LineNumberizer.Views.Behaviors
                 texts.Add(line);
             }
 
-            vm.Lines = texts;
+            vm.Lines = new ObservableCollection<Line>(texts.Select(t => new Line() { Text = t, }));
         }
 
         private void AssociatedObject_PreviewDragOver(object sender, DragEventArgs e)
