@@ -1,4 +1,5 @@
-﻿using Prism.Mvvm;
+﻿using System.Collections.Generic;
+using Prism.Mvvm;
 
 namespace LineNumberizer.ViewModels
 {
@@ -8,6 +9,8 @@ namespace LineNumberizer.ViewModels
         private string title;
 
         public string Title { get => title; set => SetProperty(ref title, value); }
+
+        public List<string> Lines { get; set; }
 
         public MainWindowViewModel()
         {
