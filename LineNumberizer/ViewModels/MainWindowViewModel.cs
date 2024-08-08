@@ -9,12 +9,12 @@ namespace LineNumberizer.ViewModels
     {
         private string title;
 
-        public string Title { get => title; set => SetProperty(ref title, value); }
-
-        public ObservableCollection<Line> Lines { get; set; } = new ();
-
         public MainWindowViewModel()
         {
         }
+
+        public string Title { get => title; set => SetProperty(ref title, value); }
+
+        public ObservableCollection<Line> Lines { get; set; } = new ();
     }
 }
