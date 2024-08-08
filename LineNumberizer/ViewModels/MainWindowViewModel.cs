@@ -11,6 +11,7 @@ namespace LineNumberizer.ViewModels
 
         public MainWindowViewModel()
         {
+            Lines = new ObservableCollection<Line>(new DummyLineProvider().DummyLines);
         }
 
         public string Title { get => title; set => SetProperty(ref title, value); }
