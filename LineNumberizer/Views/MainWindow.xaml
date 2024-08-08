@@ -6,10 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:LineNumberizer.Models"
     xmlns:prism="http://prismlibrary.com/"
     xmlns:viewModels="clr-namespace:LineNumberizer.ViewModels"
     Title="{Binding Title}"
-    Width="525"
+    Width="800"
     Height="350"
     d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel}"
     prism:ViewModelLocator.AutoWireViewModel="True"
@@ -20,6 +21,30 @@
         <behaviors:DragAndDropBehavior />
     </i:Interaction.Behaviors>
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Lines}">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type models:Line}">
+                    <DockPanel>
+                        <TextBlock
+                            Width="30"
+                            Padding="0,2"
+                            Text="{Binding LineNumber}" />
+
+                        <TextBox
+                            Width="45"
+                            Padding="0,2"
+                            Text="{Binding PrefixNumber}" />
+
+                        <Border Width="10" />
+
+                        <TextBox Width="100" Text="{Binding Prefix}" />
+
+                        <Border Width="10" />
+
+                        <TextBox Padding="0,2" Text="{Binding Text}" />
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

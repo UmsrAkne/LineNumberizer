@@ -15,6 +15,7 @@ namespace LineNumberizer.Models
                     Text = $"ダミーのテキスト test test {i}",
                     Prefix = string.Empty,
                     PrefixNumber = 0,
+                    LineNumber = (i + 1).ToString(),
                 });
             }
         }
