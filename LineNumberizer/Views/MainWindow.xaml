@@ -34,10 +34,16 @@
 
                         <Border Width="10" />
 
-                        <TextBox
-                            Width="45"
-                            Padding="0,2"
-                            Text="{Binding PrefixNumber}" />
+                        <Border
+                            Padding="3,0"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0.5">
+
+                            <TextBlock
+                                Width="45"
+                                Padding="0,2"
+                                Text="{Binding PrefixNumber}" />
+                        </Border>
 
                         <Border Width="10" />
 
