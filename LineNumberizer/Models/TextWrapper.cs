@@ -34,7 +34,7 @@ namespace LineNumberizer.Models
         [Conditional("RELEASE")]
         private void SetVersion()
         {
-            Version = "20240808" + "a";
+            Version = "20240812" + "a";
         }
 
         [Conditional("DEBUG")]
