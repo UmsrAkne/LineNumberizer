@@ -30,7 +30,7 @@
                             Padding="0,2"
                             Text="{Binding LineNumber}" />
 
-                        <TextBox Width="100" Text="{Binding Prefix}" />
+                        <TextBox Width="100" Text="{Binding FirstPrefix}" />
 
                         <Border Width="10" />
 

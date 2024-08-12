@@ -13,7 +13,7 @@ namespace LineNumberizer.Models
                 DummyLines.Add(new Line
                 {
                     Text = $"ダミーのテキスト test test {i}",
-                    Prefix = string.Empty,
+                    FirstPrefix = string.Empty,
                     PrefixNumber = 0,
                     LineNumber = (i + 1).ToString(),
                 });
